@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>universidad</title>
+    <link href="./bootstrap-4.6.0-dist/bootstrap-4.6.0-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container m-3">
+        <div class="row justify-content-center">
+            <div class="col-sm-8 col-xl-8">
+                <div class="card">
+
+                    <div class="card-header">
+                      discoteca
+                      <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">nombre</label>
+                              <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp">
+                              <div class="form-group">
+                                <label for="exampleFormControlSelect1">genero</label>
+                                <select class="form-control" id="genero">
+                                  <option></option>
+                                  <option>femenino</option>
+                                  <option>masculino</option>
+                                </select>
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">edad</label>
+                                    <input type="number" id="edad"> 
+                              </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">puntaje</label>
+                                    <input type="number" id="puntaje"> 
+                                    <div class="form-group">
+                                        <input type="button" class="btn btn-primary" onclick="validacion()" value="Ingresar">
+                                    </div>
+                              </div>
+                          </form>
+                    
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function validacion () {
+        let edad=document.getElementById('edad').value
+        let nombre=document.getElementById('nombre').value
+        let genero=document.getElementById('genero').value
+        let puntaje=document.getElementById('puntaje').value
+
+        if (edad<18) {
+            alert ('eres menor de edad, no eres aceptado' + nombre) }
+       else{
+                alert('tu edad es valida')
+            }
+        
+        
+        
+        if (puntaje<300) {
+            alert ('lo lamentamos, debido a su puntaje no es admitido' + nombre) }
+       else{
+                alert('felicitaciones eres admitido ')
+            }
+        
+        
+        if (genero=="hombre") {
+            alert ('bienvenido tus clases seran en la sede masculina' + nombre) }
+       else{
+                alert('bienvenido tus clases seran en la sede femenina')
+            }
+        }
+   
+   
+   
+   
+   
+    </script>
+
+
+
+
+
+
+    <script src="./js/jquery-3.6.min.js"></script>
+    <script src="./bootstrap-4.6.0-dist/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js" ></script>
+</body>
+</html>
